@@ -1,0 +1,116 @@
+<div class="container">
+  <div>
+    <form #form="ngForm" (ngSubmit)="submit(form)">
+      <div class="form-group">
+        <label for="nome">Nome</label>
+        <input
+          type="text"
+          id="nome"
+          name="nome"
+          ngModel
+          [value]="user.nome"
+          class="form-control"
+          required
+        />
+        <p>*Questo campo è obbligatorio</p>
+      </div>
+      <div class="form-group">
+        <label for="cognome">Cognome</label>
+        <input
+          type="text"
+          id="cognome"
+          name="cognome"
+          ngModel
+          [value]="user.cognome"
+          class="form-control"
+          required
+        />
+        <p>*Questo campo è obbligatorio</p>
+      </div>
+      <div class="form-group">
+        <label for="psw">Password</label>
+        <input
+          type="text"
+          id="psw"
+          name="psw"
+          class="form-control"
+          ngModel
+          [value]="user.psw"
+          required
+        />
+        <p>*Questo campo è obbligatorio</p>
+      </div>
+      <div class="form-group">
+        <label for="pswConfirm">Ripeti Password</label>
+        <input
+          type="text"
+          id="pswConfirm"
+          name="pswConfirm"
+          ngModel
+          [value]="user.pswConfirm"
+          class="form-control"
+          required
+        />
+        <p>*Questo campo è obbligatorio</p>
+      </div>
+      <div class="radio" *ngFor="let ciao of generi">
+        <label for="genere">
+          <input
+            type="radio"
+            name="genere"
+            id="{{ ciao.label }}"
+            ngModel
+            [value]="ciao.value"
+            required
+          />
+          {{ ciao.label }}
+        </label>
+        <p>*Questo campo è obbligatorio</p>
+      </div>
+      <div class="form-group">
+        <label for="immagineProfilo">Carica Immagine</label>
+        <input
+          type="file"
+          id="immagineProfilo"
+          name="immagineProfilo"
+          ngModel
+          [value]="user.immagineProfilo"
+          class="form-control"
+          required
+        />
+        <p>*Questo campo è obbligatorio</p>
+      </div>
+      <div class="form-group">
+        <label for="biografia">Biografia</label>
+        <textarea
+          name="biografia"
+          ngModel
+          [value]="user.biografia"
+          id="biografia"
+          rows="2"
+          class="form-control"
+        ></textarea>
+      </div>
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input
+          type="text"
+          id="username"
+          ngModel
+          [value]="user.username"
+          name="username"
+          class="form-control"
+          required
+        />
+        <p>*Questo campo è obbligatorio</p>
+      </div>
+      <button
+        type="submit"
+        class="btn btn-primary mt-3"
+        [disabled]="form.invalid"
+      >
+        Registra
+      </button>
+    </form>
+  </div>
+</div>
