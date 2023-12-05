@@ -1,4 +1,24 @@
 /* You can add global styles to this file, and also import other style files */
 p {
   font-size: 10px;
+}
+
+#container div {
+  margin-top: 15px;
+}
+
+#container {
+  background-color: beige;
+  border: 5px solid beige;
+  border-radius: 20px;
+  padding: 20px;
+  width: 400px;
+}
+
+#nome, #cognome {
+  width: 85%;
+}
+
+#psw, #pswConfirm {
+  width: 85%;
 }/*# sourceMappingURL=styles.css.map */
