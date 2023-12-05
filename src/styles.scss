@@ -10,10 +10,27 @@ p{
 
 #container{
     background-color: beige;
-    border: 5px solid beige;
+    border: 5px solid rgba(0, 0, 0, 0.11);
     border-radius: 20px;
     padding: 20px;
     width: 400px;
+}
+
+.btn-custom:enabled{
+    background-color: beige;
+    border: 1px solid rgba(0, 0, 0, 0.678);
+    border-radius: 20px;
+    padding: 8px 15px 8px 15px;
+    color: black;
+    cursor: pointer;
+}
+
+.btn-custom:disabled{
+    background-color: beige;
+    border: 1px solid rgba(0, 0, 0, 0.678);
+    border-radius: 20px;
+    padding: 8px 15px 8px 15px;
+    color: rgba(0, 0, 0, 0.144);
 }
 
 #nome, #cognome{
